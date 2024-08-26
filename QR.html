@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsRrOuIRbDBLlN6lRCwLwwvpXrqgRTxXvXLg&s" type="image/x-icon">
+    <title>QRCODE GENERATOR</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>QR CODE GENERATOR</h1>
+        <div class="image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsRrOuIRbDBLlN6lRCwLwwvpXrqgRTxXvXLg&s" alt="img" id="image">
+        </div>
+       
+  
+    <div class="form">
+        <input type="text" id="content" placeholder="content in QRcode" value="">
+        <button id="btncreate">Generate QRcode</button>
+    </div>  
+</div>
+
+    <script>
+        let image = document.getElementById("image")
+        let content = document.getElementById("content")
+        let btncreate = document.getElementById("btncreate")
+        btncreate.onclick = () => {
+            if(content.value == "")return;
+            let linkQR="http://api.qrserver.com/v1/create-qr-code/";
+            image.src = linkQR + "?size=500*500&data=" + content.value;
+        }
+    </script>
+</body>
+</html>

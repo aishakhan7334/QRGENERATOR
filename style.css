@@ -1,0 +1,75 @@
+body{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: poppins;
+    background-color: #000000;
+}
+.container{
+    width: 400px;
+    background-color: #cac6c6;
+    color: black;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    box-shadow: 30px 20px 50px #eeeeee55;
+
+}
+.container h1{
+    margin: 0;
+    font-size:x-large;
+    font-weight: bolder;
+    text-align: center;
+}
+.container .image img{
+    width: 90%;
+    height: 20%;
+    animation: imgbounceanimate 2s ease-in-out infinite;
+}
+@keyframes imgbounceanimate {
+    0%{
+        transform: translateY(6px);
+    }
+    50%{
+        transform: translateY(5px);
+    }
+    100%{
+        transform: translateY(7px);
+    }
+}
+.container .image{
+    background-color: #ffffff;
+    margin: 20px 0px;
+    padding: 15%;
+    border-radius: 30px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+.form input{
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    background-color: #000000;
+    padding: 20px;
+    border-radius: 5px;
+    font-family: poppins;
+    outline: none;
+    font-weight: bolder;
+    color: #fff;
+}
+.form button{
+    background-color: #525353;
+    width: 100%;
+    border: none;
+    color: #fff;
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-family: poppins;
+    font-weight: bold;
+}
